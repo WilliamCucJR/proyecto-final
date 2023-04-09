@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { Icon } from "semantic-ui-react";
 import './NavMenu.css';
 
 export class NavMenu extends Component {
@@ -24,19 +25,34 @@ export class NavMenu extends Component {
   render() {
     return (
       <header>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
-          <NavbarBrand tag={Link} to="/">proyecto_analisis</NavbarBrand>
+        <Navbar className="navbar-expand-xl navbar-toggleable-xl ng-white border-bottom box-shadow mb-3 color-nav" light>
+          <NavbarBrand tag={Link} to="/"><b>PROYECTO ANALISIS</b></NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+          <Collapse className="d-xl-inline-flex flex-xl-row-reverse" isOpen={!this.state.collapsed} navbar>
             <ul className="navbar-nav flex-grow">
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                <NavLink tag={Link} className="text-dark" to="/"><Icon name="home" /> Inicio</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
+                <NavLink tag={Link} className="text-dark" to="/compras"><Icon name="shop" /> Compras</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+                <NavLink tag={Link} className="text-dark" to="/proveedores"><Icon name="users" /> Proveedores</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/autorizaciones"><Icon name="check circle outline" /> Autorizaciones</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/bodega"><Icon name="factory" /> Bodega</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/contabilidad"><Icon name="calculator" /> Contabilidad</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/administracion"><Icon name="cog" /> Administración</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/cerrar-cession"><Icon name="sign-out" /> Cerrar Sesión</NavLink>
               </NavItem>
             </ul>
           </Collapse>

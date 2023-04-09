@@ -1,0 +1,36 @@
+.contenedor-autorizaciones {
+    
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-content-autorizaciones{
+    padding-top: 150px;
+    padding-bottom: 50px;
+    font-size: 75px;
+    color: #fff;
+    font-family: Poppins;
+}
+
+@media all and (min-width: 450px) and (max-width: 899px) { 
+    .header-content-autorizaciones{
+        padding-top: 150px;
+        padding-bottom: 250px;
+        font-size: 50px;
+        color: #fff;
+        font-family: Poppins;
+    }
+ }
+
+@media all and (min-width: 320px) and (max-width: 450px) { 
+    .header-content-autorizaciones{
+        padding-top: 150px;
+        padding-bottom: 250px;
+        font-size: 39px;
+        color: #fff;
+        font-family: Poppins;
+    }
+ }

@@ -1,0 +1,46 @@
+.contenedor-inventario {
+    
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.header-content-inventario{
+    padding-top: 150px;
+    padding-bottom: 50px;
+    font-size: 75px;
+    color: #fff;
+    font-family: Poppins;
+}
+
+@media all and (min-width: 699px) and (max-width: 899px) { 
+    .header-content-inventario{
+        padding-top: 150px;
+        padding-bottom: 200px;
+        font-size: 50px;
+        color: #fff;
+        font-family: Poppins;
+    }
+ }
+
+ @media all and (min-width: 700px) and (max-width: 769px) { 
+    .header-content-inventario{
+        padding-top: 150px;
+        padding-bottom: 400px;
+        font-size: 50px;
+        color: #fff;
+        font-family: Poppins;
+    }
+ }
+
+@media all and (min-width: 120px) and (max-width: 699px) { 
+    .header-content-inventario{
+        padding-top: 150px;
+        padding-bottom: 400px;
+        font-size: 50px;
+        color: #fff;
+        font-family: Poppins;
+    }
+ }
