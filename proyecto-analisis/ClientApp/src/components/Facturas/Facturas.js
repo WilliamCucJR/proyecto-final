@@ -1,45 +1,51 @@
-import { Grid, Form, Button, Icon, Table } from "semantic-ui-react";
+import React, { Component } from "react";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import { Button, Icon, Table } from "semantic-ui-react";
 import "./Facturas.css";
 
-export default function Facturas() {
-  function back() {
-    window.history.back();
-  }
+export class Facturas extends Component {
+  static displayName = Facturas.name;
 
-  return (
-    <div className="facturas-data-grid">
-      <Grid columns="three">
-        <Grid.Row>
-          <Grid.Column width={3} textAlign="center">
-            <div>
-              <Button
-                icon
-                labelPosition="left"
-                color="teal"
-                size="large"
-                onClick={back}
-              >
-                <Icon name="arrow left" />
-                Atras
-              </Button>
-            </div>
-          </Grid.Column>
-          <Grid.Column textAlign="center" width={10}>
-            <div className="text-container-facturas">
-              <span>
-                <Icon name="file alternate outline" />
-                <b> Facturas</b>
-              </span>
-            </div>
-          </Grid.Column>
-          <Grid.Column width={3}></Grid.Column>
-        </Grid.Row>
-      </Grid>
-      <div className="container">
-        <Grid columns="one">
-          <Grid.Row>
-            <Grid.Column>
-              <h2>Lista de Cotizaciones</h2>
+  render() {
+    function back() {
+      window.history.back();
+    }
+    return (
+      <>
+        <div className="header-content-facturas">
+          <Container>
+            <Grid container spacing={2} className="grid-padre-facturas">
+              <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
+                <Box display="flex" justifyContent="center">
+                  <Button
+                    icon
+                    labelPosition="left"
+                    color="teal"
+                    size="large"
+                    onClick={back}
+                  >
+                    <Icon name="arrow left" />
+                    Atras
+                  </Button>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
+                <Box display="flex" justifyContent="center">
+                  <span>
+                    <Icon name="file outline" /> Facturas
+                  </span>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12} md={2} lg={2} xl={2}></Grid>
+            </Grid>
+          </Container>
+        </div>
+        <div className="contenedor-facturas">
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <h2>Lista de Facturas</h2>
               <Table celled>
                 <Table.Header>
                   <Table.Row>
@@ -110,10 +116,10 @@ export default function Facturas() {
                   </Table.Row>
                 </Table.Body>
               </Table>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </div>
-    </div>
-  );
+            </Grid>
+          </Grid>
+        </div>
+      </>
+    );
+  }
 }

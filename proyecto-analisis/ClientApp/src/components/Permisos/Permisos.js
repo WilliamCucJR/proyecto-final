@@ -1,41 +1,54 @@
-import { Grid, Form, Button, Icon, Table, Checkbox } from "semantic-ui-react";
+import React, { Component } from "react";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import "react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css";
+import { Form, Button, Icon, Table, Checkbox, Select } from "semantic-ui-react";
 import "./Permisos.css";
 
-export default function Permisos() {
+export class Permisos extends Component {
+  static displayName = Permisos.name;
 
-  function back(){
-    window.history.back();
-  }
+  render() {
+    document.body.style = "background: #e5dccf;";
 
-  return (
-    <div className="permisos-data-grid">
-      
-      <Grid columns="three">
-        <Grid.Row>
-        <Grid.Column width={3} textAlign="center">
-            <div>
-              <Button icon labelPosition="left" color="teal" size='large' onClick={back}>
-                <Icon name="arrow left" />
-                Atras
-              </Button>
-            </div>
-          </Grid.Column>
-          <Grid.Column textAlign="center" width={10}>
-            <div className="text-container-permisos">
-              <span>
-                <Icon name="cogs" />
-                <b> Permisos</b>
-              </span>
-            </div>
-          </Grid.Column>
-          <Grid.Column width={3}>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-      <div className="container">
-        <Grid columns="two">
-          <Grid.Row>
-            <Grid.Column>
+    function back() {
+      window.history.back();
+    }
+
+    return (
+      <>
+        <div>
+          <Container className="header-content-permisos">
+            <Grid container spacing={2} className="grid-padre-permisos">
+              <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
+                <Box display="flex" justifyContent="center">
+                  <Button
+                    icon
+                    labelPosition="left"
+                    color="teal"
+                    size="large"
+                    onClick={back}
+                  >
+                    <Icon name="arrow left" />
+                    Atras
+                  </Button>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
+                <Box display="flex" justifyContent="center">
+                  <span>
+                    <Icon name="cogs" /> Permisos
+                  </span>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12} md={2} lg={2} xl={2}></Grid>
+            </Grid>
+          </Container>
+        </div>
+        <div className="contenedor-permisos">
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <h2>Editar Permisos</h2>
               <Form>
                 <Form.Group>
@@ -62,41 +75,34 @@ export default function Permisos() {
                     readOnly
                   />
                 </Form.Group>
-
-                <Grid columns="three" divided>
-                  <Grid.Row>
-                    <Grid.Column>
-                      <Checkbox label="Compras" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Checkbox label="Proveedores" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Checkbox label="Autorizaciones" />
-                    </Grid.Column>
-                  </Grid.Row>
-
-                  <Grid.Row>
-                    <Grid.Column>
-                      <Checkbox label="Bodega" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Checkbox label="Contabilidad" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Checkbox label="Administración" />
-                    </Grid.Column>
-                  </Grid.Row>
+                <br/>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+                    <Checkbox label="Compras" />
+                  </Grid>
+                  <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+                    <Checkbox label="Proveedores" />
+                  </Grid>
+                  <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+                    <Checkbox label="Autorizaciones" />
+                  </Grid>
+                  <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+                    <Checkbox label="Bodega" />
+                  </Grid>
+                  <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+                    <Checkbox label="Contabilidad" />
+                  </Grid>
+                  <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+                    <Checkbox label="Autorización" />
+                  </Grid>
                 </Grid>
-                <div>
-                  <br></br>
-                </div>
+                <br/>
                 <Button type="submit" color="teal">
                   Guardar
                 </Button>
               </Form>
-            </Grid.Column>
-            <Grid.Column>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <h2>Lista de Usuarios</h2>
               <Table celled>
                 <Table.Header>
@@ -120,7 +126,10 @@ export default function Permisos() {
                     </Table.Cell>
                     <Table.Cell>Ejecutivo</Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='yellow'><Icon name="edit outline" />Editar</Button>
+                      <Button color="yellow">
+                        <Icon name="edit outline" />
+                        Editar
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row positive>
@@ -133,7 +142,10 @@ export default function Permisos() {
                     </Table.Cell>
                     <Table.Cell>Ejecutivo</Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='yellow'><Icon name="edit outline" />Editar</Button>
+                      <Button color="yellow">
+                        <Icon name="edit outline" />
+                        Editar
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row positive>
@@ -146,7 +158,10 @@ export default function Permisos() {
                     </Table.Cell>
                     <Table.Cell>Asistende de Bodega</Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='yellow'><Icon name="edit outline" />Editar</Button>
+                      <Button color="yellow">
+                        <Icon name="edit outline" />
+                        Editar
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row negative>
@@ -159,15 +174,18 @@ export default function Permisos() {
                     </Table.Cell>
                     <Table.Cell>Ejecutivo</Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='yellow'><Icon name="edit outline" />Editar</Button>
+                      <Button color="yellow">
+                        <Icon name="edit outline" />
+                        Editar
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                 </Table.Body>
               </Table>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </div>
-    </div>
-  );
+            </Grid>
+          </Grid>
+        </div>
+      </>
+    );
+  }
 }

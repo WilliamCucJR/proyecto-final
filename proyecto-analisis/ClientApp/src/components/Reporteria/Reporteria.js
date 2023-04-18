@@ -1,234 +1,317 @@
-import { Grid, Form, Button, Icon, Table, Card } from "semantic-ui-react";
+import React, { Component } from "react";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import { Icon, Card, Button, Image } from "semantic-ui-react";
+
 import "./Reporteria.css";
 
-export default function Reporteria() {
-  function back() {
-    window.history.back();
+export class Reporteria extends Component {
+  static displayName = Reporteria.name;
+
+  render() {
+    function back() {
+      window.history.back();
+    }
+    return (
+      <>
+        <div>
+          <Container className="header-content-reporteria">
+            <Grid container spacing={2} className="grid-padre-reporteria">
+              <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
+                <Box display="flex" justifyContent="center">
+                  <Button
+                    icon
+                    labelPosition="left"
+                    color="teal"
+                    size="large"
+                    onClick={back}
+                  >
+                    <Icon name="arrow left" />
+                    Atras
+                  </Button>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
+                <Box display="flex" justifyContent="center">
+                  <span>
+                    <Icon name="clipboard list" /> Reportes
+                  </span>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12} md={2} lg={2} xl={2}></Grid>
+            </Grid>
+          </Container>
+        </div>
+        <div className="contenedor-reporteria">
+          <Grid container spacing={2}>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={4}
+              lg={2}
+              xl={2}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Card
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 10,
+                  borderRadius: 10,
+                  on: "hover",
+                }}
+                name="reporteria"
+              >
+                <Icon
+                  bordered
+                  name="file excel outline"
+                  size="huge"
+                  color="green"
+                />
+                <Card.Meta>Reporte</Card.Meta>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="green">
+                      <Icon name="download" /> Descargar
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={2} xl={2} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}>
+              <Card
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 10,
+                  borderRadius: 10,
+                  on: "hover",
+                }}
+                name="reporteria"
+              >
+                <Icon
+                  bordered
+                  name="file pdf outline"
+                  size="huge"
+                  color="red"
+                />
+                <Card.Meta>Reporte</Card.Meta>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="green">
+                      <Icon name="download" /> Descargar
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={2} xl={2} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}>
+              <Card
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 10,
+                  borderRadius: 10,
+                  on: "hover",
+                }}
+                name="reporteria"
+              >
+                <Icon
+                  bordered
+                  name="file excel outline"
+                  size="huge"
+                  color="green"
+                />
+                <Card.Meta>Reporte</Card.Meta>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="green">
+                      <Icon name="download" /> Descargar
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={2} xl={2} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}>
+              <Card
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 10,
+                  borderRadius: 10,
+                  on: "hover",
+                }}
+                name="reporteria"
+              >
+                <Icon
+                  bordered
+                  name="file pdf outline"
+                  size="huge"
+                  color="red"
+                />
+                <Card.Meta>Reporte</Card.Meta>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="green">
+                      <Icon name="download" /> Descargar
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={2} xl={2} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}>
+              <Card
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 10,
+                  borderRadius: 10,
+                  on: "hover",
+                }}
+                name="reporteria"
+              >
+                <Icon
+                  bordered
+                  name="file pdf outline"
+                  size="huge"
+                  color="red"
+                />
+                <Card.Meta>Reporte</Card.Meta>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="green">
+                      <Icon name="download" /> Descargar
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={2} xl={2} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}>
+              <Card
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 10,
+                  borderRadius: 10,
+                  on: "hover",
+                }}
+                name="reporteria"
+              >
+                <Icon
+                  bordered
+                  name="file excel outline"
+                  size="huge"
+                  color="green"
+                />
+                <Card.Meta>Reporte</Card.Meta>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="green">
+                      <Icon name="download" /> Descargar
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={2} xl={2} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}>
+              <Card
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 10,
+                  borderRadius: 10,
+                  on: "hover",
+                }}
+                name="reporteria"
+              >
+                <Icon
+                  bordered
+                  name="file excel outline"
+                  size="huge"
+                  color="green"
+                />
+                <Card.Meta>Reporte</Card.Meta>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="green">
+                      <Icon name="download" /> Descargar
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={2} xl={2} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}>
+              <Card
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 10,
+                  borderRadius: 10,
+                  on: "hover",
+                }}
+                name="reporteria"
+              >
+                <Icon
+                  bordered
+                  name="file excel outline"
+                  size="huge"
+                  color="green"
+                />
+                <Card.Meta>Reporte</Card.Meta>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="green">
+                      <Icon name="download" /> Descargar
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Grid>
+          </Grid>
+        </div>
+      </>
+    );
   }
-  return (
-    <div className="reporteria-data-grid">
-      <Grid columns="three">
-        <Grid.Row>
-          <Grid.Column width={3} textAlign="center">
-            <div>
-              <Button
-                icon
-                labelPosition="left"
-                color="teal"
-                size="large"
-                onClick={back}
-              >
-                <Icon name="arrow left" />
-                Atras
-              </Button>
-            </div>
-          </Grid.Column>
-          <Grid.Column textAlign="center" width={10}>
-            <div className="text-container-compra">
-              <span>
-                <Icon name="file outline" />
-                <b> Reportes</b>
-              </span>
-            </div>
-          </Grid.Column>
-          <Grid.Column width={3}></Grid.Column>
-        </Grid.Row>
-      </Grid>
-      <div className="container">
-        <Grid columns="five">
-          <Grid.Row>
-            <Grid.Column>
-              <Card
-                className="card"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: 10,
-                  borderRadius: 10,
-                  on: "hover",
-                }}
-                name="reporteria"
-              >
-                <Icon
-                  bordered
-                  name="file pdf outline"
-                  size="huge"
-                  color="red"
-                />
-                <Card.Content>
-                  <Card.Header>
-                    <Icon name="cloud download" /> Reportería
-                  </Card.Header>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                className="card"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: 10,
-                  borderRadius: 10,
-                  on: "hover",
-                }}
-                name="reporteria"
-              >
-                <Icon
-                  bordered
-                  name="file pdf outline"
-                  size="huge"
-                  color="red"
-                />
-                <Card.Content>
-                  <Card.Header>
-                    <Icon name="cloud download" /> Reportería
-                  </Card.Header>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                className="card"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: 10,
-                  borderRadius: 10,
-                  on: "hover",
-                }}
-                name="reporteria"
-              >
-                <Icon
-                  bordered
-                  name="file excel outline"
-                  size="huge"
-                  color="green"
-                />
-                <Card.Content>
-                  <Card.Header>
-                    <Icon name="cloud download" /> Reportería
-                  </Card.Header>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                className="card"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: 10,
-                  borderRadius: 10,
-                  on: "hover",
-                }}
-                name="reporteria"
-              >
-                <Icon
-                  bordered
-                  name="file pdf outline"
-                  size="huge"
-                  color="red"
-                />
-                <Card.Content>
-                  <Card.Header>
-                    <Icon name="cloud download" /> Reportería
-                  </Card.Header>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                className="card"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: 10,
-                  borderRadius: 10,
-                  on: "hover",
-                }}
-                name="reporteria"
-              >
-                <Icon
-                  bordered
-                  name="file excel outline"
-                  size="huge"
-                  color="green"
-                />
-                <Card.Content>
-                  <Card.Header>
-                    <Icon name="cloud download" /> Reportería
-                  </Card.Header>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-        <Grid columns="five">
-          <Grid.Row>
-            <Grid.Column>
-              <Card
-                className="card"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: 10,
-                  borderRadius: 10,
-                  on: "hover",
-                }}
-                name="reporteria"
-              >
-                <Icon
-                  bordered
-                  name="file excel outline"
-                  size="huge"
-                  color="green"
-                />
-                <Card.Content>
-                  <Card.Header>
-                    <Icon name="cloud download" /> Reportería
-                  </Card.Header>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                className="card"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: 10,
-                  borderRadius: 10,
-                  on: "hover",
-                }}
-                name="reporteria"
-              >
-                <Icon
-                  bordered
-                  name="file excel outline"
-                  size="huge"
-                  color="green"
-                />
-                <Card.Content>
-                  <Card.Header>
-                    <Icon name="cloud download" /> Reportería
-                  </Card.Header>
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-            <Grid.Column></Grid.Column>
-            <Grid.Column></Grid.Column>
-            <Grid.Column></Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </div>
-    </div>
-  );
 }

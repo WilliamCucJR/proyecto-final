@@ -13,6 +13,9 @@ import { Cotizaciones } from "./components/Cotizaciones/Cotizaciones";
 import { OrdenesCompra } from "./components/OrdenesCompra/OrdenesCompra";
 import { RecepcionPedido } from "./components/RecepcionPedido/RecepcionPedido";
 import { Usuarios } from "./components/Usuarios/Usuarios";
+import { Facturas } from "./components/Facturas/Facturas";
+import { Reporteria } from "./components/Reporteria/Reporteria";
+import { Permisos } from "./components/Permisos/Permisos";
 
 const AppRoutes = [
   {
@@ -70,6 +73,18 @@ const AppRoutes = [
   {
     path: '/usuarios',
     element: <Usuarios />
+  },
+  {
+    path: '/facturas',
+    element: <Facturas />
+  },
+  {
+    path: '/reportes',
+    element: <Reporteria />
+  },
+  {
+    path: '/permisos',
+    element: <Permisos />
   }
 ];
 
