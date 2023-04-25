@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import "react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css";
-import { Form, Button, Icon, Table, Checkbox, Select } from "semantic-ui-react";
+import { Form, Button, Icon, Table, Checkbox } from "semantic-ui-react";
 import "./Permisos.css";
 
 export class Permisos extends Component {
